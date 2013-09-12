@@ -5,7 +5,7 @@
 
 {% block nav-global %}{% endblock %}
 
-{% block content_title %}<h1>{% trans "Enter username and password" %}</h1>{% endblock %}
+{% block content_title %}<h1>{% trans u"Enter username and password" %}</h1>{% endblock %}
 
 {% block breadcrumbs %}{% endblock %}
 
@@ -29,14 +29,14 @@
 <div id="content-main">
 <form action="{{ app_path }}" method="post" id="login-form" class="form-horizontal">{% csrf_token %}
   <div class="control-group{% if form.username.errors %} error{% endif %}">
-    <label for="id_username" class="required control-label">{% trans 'Username:' %}</label>
+    <label for="id_username" class="required control-label">{% trans u'Username:' %}</label>
     <div class="controls">
       {{ form.username }}
       {% if form.username.errors %}<span class="help-inline">{{ form.username.errors }}</span>{% endif %}
     </div>
   </div>
   <div class="control-group{% if form.password.errors %} error{% endif %}">
-    <label for="id_password" class="required control-label">{% trans 'Password:' %}</label> 
+    <label for="id_password" class="required control-label">{% trans u'Password:' %}</label> 
     <div class="controls">
       {{ form.password }}
       {% if form.password.errors %}<span class="help-inline">{{ form.password.errors }}</span>{% endif %}
