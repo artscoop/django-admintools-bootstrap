@@ -14,7 +14,9 @@
   {{ media.css }}
   {% if not actions_on_top and not actions_on_bottom %}
     <style>
-{#      #changelist table thead th:first-child {width: inherit}#}
+{% comment %}     
+  #changelist table thead th:first-child {width: inherit}
+{% endcomment %}
     </style>
   {% endif %}
 {% endblock %}
@@ -78,6 +80,8 @@
     </div>
   {% endif %}
 {% endblock %}
+
+
 {% block content %}
   <div id="content-main">
     {% block filters %}
