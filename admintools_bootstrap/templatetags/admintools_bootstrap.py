@@ -6,7 +6,7 @@ from django.contrib.admin.views.main import PAGE_VAR, ALL_VAR
 from django.conf import settings
 from django.contrib.sites.models import Site
 
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 
 
 register = template.Library()
