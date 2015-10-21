@@ -15,11 +15,11 @@ register = template.Library()
 @register.simple_tag
 def atb_site_link():
     if settings.ADMINTOOLS_BOOTSTRAP_SITE_LINK:
-        return '''
+        return mark_safe('''
             <li><a href="%s"  class="top-icon" title="%s" rel="popover" data-placement="below"><i
                 class="icon-home icon-white"></i></a></li>
                 <li class="divider-vertical"></li>
-            ''' % (settings.ADMINTOOLS_BOOTSTRAP_SITE_LINK, _('Open site'))
+            ''' % (settings.ADMINTOOLS_BOOTSTRAP_SITE_LINK, _('Open site')))
     else:
         return ''
 
